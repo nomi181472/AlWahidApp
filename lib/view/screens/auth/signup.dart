@@ -1,8 +1,11 @@
-import 'package:alwahidapp/view/animations/FadeAnimation.dart';
+
+import 'package:alwahidapp/view/components/custom_elevated_button.dart';
 import 'package:alwahidapp/view/screens/auth/login.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +19,12 @@ class SignupPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.black,),
+          icon:const Icon(Icons.arrow_back_ios, size: 20, color: Colors.black,),
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
 
           height: MediaQuery.of(context).size.height - 90,
 
@@ -33,12 +36,12 @@ class SignupPage extends StatelessWidget {
 
               Column(
                 children: <Widget>[
-                  Text("Sign up", style: TextStyle(
+                  const Text("Sign up", style:  TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold
                   ),),
 
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
 
                    Text("Create an account, It's free", style: TextStyle(
                     fontSize: 15,
@@ -55,47 +58,20 @@ class SignupPage extends StatelessWidget {
                 ],
               ),
 
-              Container(
-                padding: EdgeInsets.only(top: 3, left: 3),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  border: Border(
-                    bottom: BorderSide(color: Colors.black),
-                    top: BorderSide(color: Colors.black),
-                    left: BorderSide(color: Colors.black),
-                    right: BorderSide(color: Colors.black),
-                  )
-                ),
-
-                child: MaterialButton(
-                  minWidth: double.infinity,
-                  height: 50,
-                  onPressed: () {},
-                  color: Colors.black,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)
-                  ),
-                  child: Text("Sign up", style: TextStyle(
-                    fontWeight: FontWeight.w600, 
-                    fontSize: 18,
-                    color: Colors.white
-                  ),),
-                ),
-              ),
+              CustomElevatedButton(customOnPressed: (){},customText: "Sign up",),
  Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Already have an account ? " ,style: TextStyle(
+                 const Text("Already have an account ? " ,style: TextStyle(
                       fontWeight: FontWeight.w600, fontSize: 18,color: Colors.black
                   ),),
 
 
-                  new GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                   TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const LoginPage()));
                     },
-                    child: new Text("Sign In", style: TextStyle(
+                    child:  const Text("Sign In", style: TextStyle(
                         fontWeight: FontWeight.w600, fontSize: 20,color: Colors.red
                     ),),
                   )
@@ -119,13 +95,13 @@ class SignupPage extends StatelessWidget {
 
       children: <Widget>[
 
-        Text(label, style: TextStyle(
+        Text(label, style: const TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w400,
           color: Colors.black87
         ),),
 
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         TextField(
           obscureText: obscureText,
@@ -133,25 +109,25 @@ class SignupPage extends StatelessWidget {
 
           decoration: InputDecoration(
 
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+            contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
 
             enabledBorder: OutlineInputBorder(
                 borderRadius: const BorderRadius.all(
-                  const Radius.circular(15.0),
+                   Radius.circular(15.0),
                 ),
               borderSide: BorderSide(color: Colors.grey[400]!,style: BorderStyle.solid)
             ),
 
             border: OutlineInputBorder(
                 borderRadius: const BorderRadius.all(
-                  const Radius.circular(20.0),
+                   Radius.circular(20.0),
                 ),
               borderSide: BorderSide(color: Colors.grey[400]!)
             ),
           ),
         ),
 
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
 
       ],
     );

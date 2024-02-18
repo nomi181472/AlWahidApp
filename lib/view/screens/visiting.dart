@@ -44,7 +44,7 @@ class VisitingScreen extends StatelessWidget {
                     customText: "Login",
                     customOnPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LoginPage()));
+                          MaterialPageRoute(builder: (context) =>const LoginPage()));
                     },
                   ),
                   const SizedBox(
@@ -54,7 +54,7 @@ class VisitingScreen extends StatelessWidget {
                     customText: "Sign Up",
                     customOnPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignupPage()));
+                          MaterialPageRoute(builder: (context) =>const SignupPage()));
                     },
                     buttonBackgroundColor: Colors.white,
                     textColor: Colors.black,

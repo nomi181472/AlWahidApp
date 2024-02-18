@@ -13,7 +13,7 @@ class Root extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "title here",
       home: VisitingScreen(),
