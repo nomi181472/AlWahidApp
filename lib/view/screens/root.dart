@@ -1,3 +1,4 @@
+import 'package:alwahidapp/view/screens/home.dart';
 import 'package:alwahidapp/view/screens/visiting.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class Root extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "title here",
-      home: VisitingScreen(),
+      home: BottomNavBarApp(),
     );
   }
 }
